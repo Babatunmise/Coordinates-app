@@ -1,0 +1,134 @@
+
+body {
+    background-image: url(earth4.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    display: flex;
+    justify-content: center;
+    font-family: 'Inter', sans-serif;
+}
+.main-display {
+    animation-name: slit-in-horizontal;
+		animation-duration: 1s;
+		animation-timing-function: ease;
+		animation-delay: 0s;
+		animation-iteration-count: 1;
+		animation-direction: normal;
+		animation-fill-mode: none;
+			
+}
+@keyframes slit-in-horizontal {
+			
+    0% {
+        transform:translateZ(-800px) rotateX(90deg);
+        opacity:0;
+    }
+    50% {
+        transform:translateZ(-160px) rotateX(87deg);
+        opacity:1;
+    }
+    100% {
+        transform:translateZ(0) rotateX(0);
+    }
+}
+@media (max-width: 480px){
+    .main-display {
+        width: 80%;
+    }
+}
+@media (min-width: 481px){
+    .main-display{
+        width: 400px;
+    }
+}
+button {
+    padding: 0.5em 1.5em;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #fff;
+    border: none;
+    background-color: #031D44;
+    border-radius: 100px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.178);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+ 
+  }
+  
+  button:hover {
+    background-color: #004F2D;
+    box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
+  }
+  
+  button:active {
+    transform: translateY(-1px);
+  }
+  .background{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 1;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.616);
+    display: flex;
+    justify-content: center;
+display: none;
+  }
+  .information{
+    border-radius: 10px;
+    -webkit-animation:bounce-in 1s ease 0s 1 normal;
+    -moz-animation:bounce-in 1s ease 0s 1 normal;
+    -ms-animation:bounce-in 1s ease 0s 1 normal;
+    animation:bounce-in 1s ease 0s 1 normal;
+  }
+  @media (max-width: 480px){
+    .information {
+        width: 80%;
+    }
+}
+@media (min-width: 481px){
+    .information{
+        width: 400px;
+    }
+}
+#earthvid{
+    position: fixed;
+    z-index: -1;
+}
+@media (min-aspect-ratio: 16/9){
+    #earthvid {
+        width: 100%;
+        height: auto;
+    }
+}
+@media (max-aspect-ratio: 16/9){
+    #earthvid {
+        width: auto;
+        height: 100%;
+    }
+}
+
+    
+    @-webkit-keyframes bounce-in {
+    0%{ opacity: 0; -webkit-transform: scale(.3); transform: scale(.3); }
+    50%{ opacity: 1; -webkit-transform: scale(1.0); transform: scale(1.0); }
+    70%{ -webkit-transform: scale(0.9); transform: scale(0.9); }
+    100%{ -webkit-transform: scale(1); transform: scale(1); }
+    }
+    
+    @keyframes bounce-in {
+    0%{ opacity: 0; transform: scale(.3); }
+    50%{ opacity: 1; transform: scale(1.0); }
+    70%{ transform: scale(0.9); }
+    100%{ transform: scale(1); }
+    }
